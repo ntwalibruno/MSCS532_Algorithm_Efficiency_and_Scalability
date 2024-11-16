@@ -27,12 +27,10 @@ class HashTable:
             
         return None
 
-    def display_hash(self):
+    def display_hashtable(self):
         print(str(self.table))
 
 if __name__ == "__main__":
-    a = [15, 11, 27, 8, 12]
-
     hashTable = HashTable()
     
     hashTable.InsertItem(1, "House")
@@ -40,6 +38,9 @@ if __name__ == "__main__":
     hashTable.InsertItem(2, "Condo")
     hashTable.InsertItem("Room", 5)
 
+    value = hashTable.Search("Room")
+    print("Search for key 'Room':",value)
+
     hashTable.DeleteItem("Room")
 
-    hashTable.display_hash()
+    hashTable.display_hashtable()
